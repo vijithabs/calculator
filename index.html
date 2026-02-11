@@ -11,6 +11,7 @@
 <body>
     <div id="calculator">
         <input id="display" readonly>
+        <p id="result"></p>
        
         <div id="keys">
             <button class="operator-btn" onclick="appendToDisplayAdd('+')">+</button>
@@ -28,7 +29,7 @@
             <button class="operator-btn" onclick="appendToDisplayDiv('/')">/</button>
             <button onclick="appendToDisplay(0)">0</button>
             <button onclick="appendToDisplay('00')">00</button>
-            <button onclick="appendToDisplay()">.</button>
+            <button onclick="appendToDisplay('.')">.</button>
             <button class="operator-btn" onclick="clearDisplay()">AC</button>
             <button class="operator-El"onclick="appendToDisplay('%')">%</button>
             <button class="operator-El" onclick="appendToDisplayBack()"><img src="./image/left.png" alt=""></button>

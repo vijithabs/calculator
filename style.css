@@ -9,6 +9,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 70vh;
+    margin: 50px;
   
 }
 
@@ -36,7 +37,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
+    padding: 25px;/
+
 }
 
 button {
@@ -49,6 +51,12 @@ button {
     font-size: larger;
     font-weight: bold;
     cursor: pointer;
+}
+#result{
+    padding: 10px;
+    margin-top: 20px;
+    font-size:30px;
+
 }
 
 button:hover {
@@ -71,7 +79,7 @@ button:active {
     background-color: hsl(39, 100%, 75%);
 }
 .operator-El,.calculate{
-    background-color: hsl(0, 0%, 40%);
+    /* background-color: hsl(0, 0%, 40%); */
 }
 .operator-El:hover{
      background-color: hsl(0, 0%, 50%);
@@ -79,9 +87,12 @@ button:active {
 .operator-El:active{
      background-color: hsl(0, 0%, 60%);
 }
+.calculate{
+      background-color: rgb(2, 77, 2);
+}
 .calculate:hover{
-     background-color: hsl(0, 0%, 50%);
+         background-color: rgb(2, 100, 4);
 }
 .calculate:active{
-     background-color: hsl(0, 0%, 60%);
+          background-color: rgb(2,130, 6);
 }

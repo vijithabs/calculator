@@ -1,52 +1,65 @@
-let display = document.getElementById("display")
+let display = document.getElementById("display");
+let result = document.getElementById("result");
 
 function appendToDisplay(number) {
-    display.value = display.value + number
+  display.value = display.value + number;
 }
 function appendToDisplayAdd(operator) {
-    display.value = display.value + operator
+  display.value = display.value + operator;
 }
 function appendToDisplayMinus(operator) {
-    display.value = display.value + operator
+  display.value = display.value + operator;
 }
 function appendToDisplayMult(operator) {
-    display.value = display.value + operator
+  display.value = display.value + operator;
 }
 function appendToDisplayDiv(operator) {
-    display.value = display.value + operator
+  display.value = display.value + operator;
 }
 
 function clearDisplay() {
-    display.value = ""
+  display.value = "";
 }
 function appendToDisplayBack() {
-
-    display.value = display.value.slice(0, -1)
-
+  display.value = display.value.slice(0, -1);
 }
-
 
 function calculate() {
-    let operator;
-    let number1;
-    let number2;
-    let result;
-    console.log(operator);
+  let operator;
+  let expression = display.value;
 
-    if (operator === "+") {
-        // display.value = number1 + number2;
-        result = number1 + number2
-        console.log(result);
+  let index;
+
+  console.log(operator);
+  for (let i = 0; i < expression.length; i++) {
+    if (
+      expression[i] == "+" ||
+      expression[i] == "-" ||
+      expression[i] == "*" ||
+      expression[i] == "/"
+    ) {
+      operator = expression[i];
+      index = i;
+      break;
     }
-    // } else if (operator === "-") {
-    //     display.value = number1 - number2;
+  }
+  let number1 = Number(expression.slice(0, index));
+  let number2 = Number(expression.slice(index + 1));
 
-    // } else if (operator === "*") {
-    //     display.value = number1 * number2;
+  let result;
 
-    // } else {
-    //     display.value = number1 / number2;
-    // }
-    display.value = `${result}`
+  if (operator === "+") {
+    result = number1 + number2;
+
+    console.log(result);
+  } else if (operator === "-") {
+    result = number1 - number2;
+    console.log(result);
+  } else if (operator === "*") {
+    result = number1 * number2;
+  } else {
+    result = number1 / number2;
+  }
+  display.value = `${result}`;
+
 }
-
